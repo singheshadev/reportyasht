@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>mongo connection</title>
+</head>
+<body>
+<form action="http://127.0.0.1:8031/mongodbadd" method="POST">
+    <h1>Add data</h1>
+    Enter eid:<input type="text" name="eid">
+    <br>
+    Enter name:<input type="text" name="name">
+    <br>
+    Enter number:<input type="text" name="number">
+    <br>
+    <input type="submit" value="Submit">
+</form>
+<form action="http://127.0.0.1:8031/mongoupdate" method="POST">
+    <h1>update data</h1>
+    Enter eid:<input type="text" name="eid1">
+    <br>
+    Enter newname:<input type="text" name="name1">
+    <br>
+    Enter newnumber:<input type="text" name="number1">
+    <br>
+    <input type="submit" value="Submit">
+</form>
+<form action="http://127.0.0.1:8031/mongodelete" method="POST">
+    <h1>delete data</h1>
+    Enter eid:<input type="text" name="eid2">
+    <br>
+
+    <br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

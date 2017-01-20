@@ -15,6 +15,7 @@ function mongoadd() {
               db.collection('user').insert({
                   "name":"user4","eid":"u4","number":"00012"
 
+
               });
                 res.send({message : "user successfully registered"});
             }

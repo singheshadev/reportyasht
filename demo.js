@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var mongotest1=require('./mongotest.js');
 var mongoadd=require('./mongoadd.js');
+var mde=require('./mondel.js');
 // END modules
 var mongoUpdate=require('./mongoUpdate.js');
 var app = express();
@@ -54,6 +55,10 @@ mongoadd.get(res);
 })
 app.get('/mongup',function(req,res){
   mongoUpdate.get(res);
+})
+app.get('/mondel',function (req,res) {
+    mde.get(res);
+
 })
 app.post('/test11', function(req, res) {
 
