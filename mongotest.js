@@ -19,7 +19,7 @@ function mongotest()
         {
              if(err){console.log("conncetion pro"+err)}else{
             db.collection('user').find().toArray(function(err,data){
-                if(err){console.log("abcddfhfskdfgk1111  "+err);}
+                if(err){console.log(err);}
                 else
                 {
                     console.log(data);

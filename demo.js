@@ -2,10 +2,11 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
-var mongotest=require('./mongotest.js');
-
+var mongotest1=require('./mongotest.js');
+var mongoadd=require('./mongoadd.js');
+var mde=require('./mondel.js');
 // END modules
-
+var mongoUpdate=require('./mongoUpdate.js');
 var app = express();
 var server = require('http').Server(app);
 var sql = require('./index');
@@ -45,11 +46,18 @@ app.post('/delete',function (req,res){
 });*/
 
 app.get('/mong',function (req,res) {
-    mongotest.get(res);
+    mongotest1.get(res);
 
 })
 app.get('/mongadd',function (req,res) {
 
+mongoadd.get(res);
+})
+app.get('/mongup',function(req,res){
+  mongoUpdate.get(res);
+})
+app.get('/mondel',function (req,res) {
+    mde.get(res);
 
 })
 app.post('/test11', function(req, res) {
