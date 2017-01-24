@@ -10,7 +10,8 @@ var Schema       = mongoose.Schema;
 
 var BearSchema   = new Schema({
     name: String,
-    age:  String
+    age:  String,
+    id:   Number
 });
 
 module.exports = mongoose.model('Bear', BearSchema);

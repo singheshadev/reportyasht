@@ -20,11 +20,19 @@ app.use(bodyParser.json());
  });
   app.post('/add',function(req, res) {
 
+
         var bear = new Bear();
       // create a new instance of the Bear model
         bear.name = req.body.name;
       // set the bears name (comes from the request)
         bear.age=req.body.age;
+      Bear.find({},{_id : 0,__v : 0},function (abb,acc) {
+          if(abb){}
+          else
+          { console.log(acc[acc.length-1].id);
+              bear.id=acc.length;
+          }
+      });
         // save the bear and check for errors
        Bear.find({"age":req.body.age,"name":req.body.name},function(err,data)
        {
@@ -34,7 +42,11 @@ app.use(bodyParser.json());
                if(data.length>0){
                    res.send({data:"Allready exist"});
                }
-               else{addd();}
+               else{
+                   //bear.id=data.length+1;
+
+                   addd();
+               }
            }
        });
        function addd(){ bear.save(function(err,data) {
@@ -125,7 +137,7 @@ app.post('/update',function (req,res)
 })
 app.get('/disp',function (req,res)
 {
-    Bear.find(function (err,data)
+    Bear.find({},{_id : 0,__v : 0},function (err,data)
     {
         if(err)
         {
