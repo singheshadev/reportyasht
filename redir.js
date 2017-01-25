@@ -1,11 +1,15 @@
 /**
  * Created by lcom23_one on 1/24/2017.
  */
+var con1=require('./config1.js')
 var express=require('express')
 var app=express();
 
-
-app.get('/re',function(req,res){
+app.get('/',function(req,res){console.log("edfsdf");
     res.sendFile(__dirname+"/output.html");
+
 });
-app.listen(8089);
+var server = app.listen(con1.port, function() {
+    console.log('Ready on port %d', server.address().port);
+});
+console.log(con1.port);
