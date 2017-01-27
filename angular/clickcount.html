@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="clickcount.js"></script>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="myctrl" ng-init="click=0">
+    <button ng-Click="add1()">Click!</button>
+    {{click}}
+</div>
+
+</body>
+</html>
