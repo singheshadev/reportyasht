@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="addrem.js"></script>
+</head>
+<body>
+<div ng-app="myapp" >
+    <h1>first contreller</h1>
+ <div ng-controller="myctrl">
+  <li ng-repeat="x in products">{{x}}<span ng-click="removePro($index)"><input type="button" value="remove"></span></li>
+     <input ng-model="additem">
+     <button ng-click="addItem()">Add</button>{{var1}}
+ </div>
+    <h1>second controller</h1>
+<div  ng-controller="myctrl2">
+    <input ng-model="arr">{{arr}}
+    {{var1}}
+</div>
+</div>
+</body>
+</html>

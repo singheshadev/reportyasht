@@ -40,10 +40,7 @@ app.post('/delete',function (req,res){
 }
 
 );
-/*app.post('/login', function (req, res) {
-    if (!req.body) return res.sendStatus(400)
-    res.send({message: 'welcome, ' + req.body.id})
-});*/
+
 
 app.get('/mong',function (req,res) {
     mongotest1.get(res);
@@ -91,19 +88,6 @@ app.post('/update', function(req, res) {console.log(req.body.name+"aaaa "+req.bo
     })
 });
 
-app.get('/test12',function (req,res) {
-     //res.redirect('../../www.google.com');
-    /*console.log("Received data: ", req.query);
-
-    query = "delete from list where username='"+req.query.username+"'";
-    console.log(query);
-    sql.executeSql(query,function (err,data) {
-        if(err){
-            return res.send({error: err});
-        }
-        return res.send({data : data});
-    })*/
-});
 app.get('/about',function(req,res){
     res.sendFile(path.join(__dirname,'/about.html'))
 });

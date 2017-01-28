@@ -5,7 +5,7 @@ var con1=require('./config1.js')
 var express=require('express')
 var app=express();
 
-app.get('/',function(req,res){console.log("edfsdf");
+app.get('/',function(req,res){
     res.sendFile(__dirname+"/output.html");
 
 });

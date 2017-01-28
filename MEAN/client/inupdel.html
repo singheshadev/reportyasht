@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="insertrec.js">
+    </script>
+</head>
+<body ng-app="myApp" ng-controller="myctrl">
+
+<form action="http://localhost:8089/add" method="POST">
+    Enter name:<input ng-model="name" name="fname" ><br>
+    Enter email:<input ng-model="email" name="email"><br>
+    password : <input type="password" name="pwd"><br>
+    <input type="submit" value="Insert record">
+</form>
+<!-- Angular code from insertrec.js file  -->
+<table>
+    <tr>
+        <td>Name</td>
+        <td>{{name}}</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>{{email}}</td>
+    </tr>
+
+</table><br>
+<br>
+<form action="delete.html">
+    <input type="submit" value="delete record">  <!-- Redirect to delete.html page -->
+</form>
+<br>
+<form action="update.html">
+    <input type="submit" value="Update record">  <!-- Redirect to update.html page -->
+</form>
+</body>
+</html>
