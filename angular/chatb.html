@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="chatcss.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="chatajs.js"></script>
+</head>
+<body ng-app="myapp" ng-controller="myctrl">
+<div ng-repeat="x in messages">
+    <div ng-if="$index %2 ==0">
+        you : {{x}}
+    </div>
+    <div ng-if="$index %2 ==1">
+        Bot : {{x}}
+    </div>
+</div>
+<div id="footer">
+ <textarea rows="1" cols="80%" ng-model="message">
+dfssd
+</textarea>
+    <button ng-click="reply1()">send</button>
+</div>
+</body>
+</html>
