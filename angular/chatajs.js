@@ -29,11 +29,9 @@ app.controller('myctrl',function($scope){
         {
             $scope.messages.push($scope.message);
             $scope.mes="<a href='google.com'>click on me<a>";
-
             $scope.messages.push($scope.mes);
             $scope.message="";
         }
-        
         else
         {
             $scope.messages.push($scope.message);
