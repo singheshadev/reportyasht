@@ -28,6 +28,7 @@ var storage = multer.diskStorage({
     },
     filename: function (req, file, cb) {
         filename=file.originalname+'-'+req.body.name+'.jpg';
+        console.log(filename);
         cb(null, filename );
 
     }
@@ -134,7 +135,8 @@ app.post("/insertData",function (req, res) {
             if(err){
                 res.send(err);
             }
-            else {
+            else
+                {
 
                 user.state = data[0].name;
                 User.find({},(function (err,data)
@@ -200,11 +202,11 @@ app.delete("/deleteData/:id",function (req, res) {
 });
 app.post("/updateData/:id",function (req, res) {
 
-    User.update({"_id":req.body.id},{$set:{"name":req.body.name}},function (err,data) {
+    User.update({"_id":req.params.id},{$set:{"name":req.body.name}},function (err,data) {
         if(err){console.log(req.params.id+"hhhhhh");
             res.send(err);
         }
-        else{console.log("done");console.log(req.body.id+"hhhhhh");
+        else{console.log("done");console.log(req.body.name+"cc");
             res.send(data);
         }
     });

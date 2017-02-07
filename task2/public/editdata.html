@@ -1,0 +1,7 @@
+<div ng-repeat="x in curdata">
+<input type="text" ng-value="x.name" ng-model="x.name"><br>
+<input type="text" ng-value="x.username" ng-model="x.username"><br>
+<input type="text" ng-value="x.email" ng-model="x.email"><br>
+<input type="text" ng-value="x.city" ng-model="x.city"><br>
+<button ng-click="update(x)">Update</button>
+</div>

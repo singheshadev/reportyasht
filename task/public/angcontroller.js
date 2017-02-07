@@ -19,6 +19,14 @@ function MainController($scope,$http) {
             $scope.city = response.data;
         })
     };
+    var d = {
+        name:"",
+        state: "",
+        city: "",
+        gender: "",
+        email: "",
+        ufile : ""
+    };
     $scope.addData = function () {
         var data = {
             name: $scope.name,
@@ -70,20 +78,20 @@ function MainController($scope,$http) {
         });
     };
 
-    $scope.updateData = function (id) {console.log($scope.i_d+id+"abcd");
-        debugger;
+    $scope.updateData = function (id) {console.log("   bbb "+id+"abcd");
+
         var data = {
             id : id,
-            name: $scope.name,
-            state: $scope.state,
-            city: $scope.city,
-            gender: $scope.gender,
-            email: $scope.email
+            name: $scope.getdata.name,
+            state: $scope.getdata.state,
+            city: $scope.getdata.city,
+            gender: $scope.getdata.gender,
+            email: $scope.getdata.email
 
         };
-
-        $http.post("/updateData/"+id).then(function (response) {
-
+        console.log(data);
+        $http.post("/updateData/"+id,data).then(function (response) {
+          console.log(response);
         });
 
         $http.get("/displayData").then(function (response) {

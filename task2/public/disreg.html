@@ -1,0 +1,15 @@
+<div>
+    <button ng-click="redirect()">Add Data</button>
+
+    <div ng-repeat="x in getdata" >
+           {{getdata}}
+        <form name="updatefrm" ng-submit="updateData(x._id)">
+            <input type="text" ng-value="x._id" ng-model="getdata._id"><br><br>
+            <input type="text" ng-value="x.name" ng-model="getdata.name"><br><br>
+            <input type="text" ng-value="x.city" ng-model="getdata.city"><br><br>
+            <input type="text" ng-value="x.username" ng-model="getdata.username"><br><br>
+            <input type="text" ng-value="x.email" ng-model="getdata.email"><br><br>
+            <input type="submit" ng-value="submit" ng-model="submit"></form>
+    </div>
+
+</div>

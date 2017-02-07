@@ -105,7 +105,7 @@ app.post('/login',function (req,res) {
             {
 
                 console.log("Success");
-                res.sendFile(path.join(__dirname,'/login.html'));
+                res.sendFile(path.join(__dirname,'/index.html'));
             }
         }
     });

@@ -1,0 +1,40 @@
+<div>
+    <button ng-click="redirect()">Add Data</button>
+
+   <table border="1">
+       <thead>
+       <td ng-click="myorder('name')">name</td>
+       <td ng-click="myorder('username')">username</td>
+       <td>email</td>
+       <td>city</td>
+       <td>profile</td>
+       <td>EDIT
+       </td>
+       <td>DELETE</td>
+       </thead>
+       <tr ng-repeat="x in dispdata | orderBy:Orderb" >
+           <td>
+               {{x.name}}
+           </td>
+           <td>
+               {{x.username}}
+           </td>
+           <td>
+               {{x.city}}
+           </td>
+           <td>
+               {{x.email}}
+           </td>
+
+           <td>
+               <img ng-src="uploads/{{x.filename}}" alt="{{x.filename}}" style="height: 100px;width: 100px;">
+           </td>
+           <td>
+               <button ng-click="gotoEdit(x)">Edit</button>
+           </td>
+           <td>
+               <button ng-click="deletedata(x)">delete</button>
+           </td>
+       </tr>
+   </table>
+</div>

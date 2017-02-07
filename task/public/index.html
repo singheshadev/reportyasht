@@ -80,17 +80,18 @@
 
         </tr>
     </table>
-    <form name="updatefrm" ng-submit="updateData(d._id)">
+
         <div ng-repeat="d in getdata">
-            <input type="text" ng-value="d._id" ng-model="i_d"><br><br>
-            <input type="text" ng-value="d.name" ng-model="name"><br><br>
-            <input type="text" ng-value="d.state" ng-model="state"><br><br>
-            <input type="text" ng-value="d.city" ng-model="city"><br><br>
-            <input type="text" ng-value="d.gender" ng-model="gender"><br><br>
-            <input type="text" ng-value="d.email" ng-model="email"><br><br>
-            <input type="submit" ng-value="submit" ng-model="submit">
+            <form name="updatefrm" ng-submit="updateData(d._id)">
+                <input type="text" ng-value="d._id" ng-model="i_d"><br><br>
+            <input type="text" ng-value="d.name" ng-model="getdata.name"><br><br>
+            <input type="text" ng-value="d.state" ng-model="getdata.state"><br><br>
+            <input type="text" ng-value="d.city" ng-model="getdata.city"><br><br>
+            <input type="text" ng-value="d.gender" ng-model="getdata.gender"><br><br>
+            <input type="text" ng-value="d.email" ng-model="getdata.email"><br><br>
+            <input type="submit" ng-value="submit" ng-model="submit"></form>
         </div>
-    </form>
+
 </div>
 </body>
 </html>
